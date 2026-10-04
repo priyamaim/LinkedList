@@ -1,0 +1,24 @@
+package linkedlist;
+
+public class Insert_node_before_kth_node_DLL {
+
+    public ListNode insertBeforeKthPosition(ListNode head, int X, int K) {
+        if(head==null && K==1)return new ListNode(X);
+        ListNode ptr =head;
+        int count=1;
+        while(ptr!=null && count<K){
+            ptr=ptr.next;
+            count++;
+        }
+        ListNode newnode = new ListNode(X);
+        if(ptr!=null){
+        newnode.next=ptr;
+        newnode.prev=ptr.prev;
+        if(ptr.prev!=null)ptr.prev.next=newnode;
+        else
+        head=newnode;}
+        ptr.prev=newnode;
+        return head;
+    }
+}
+    
