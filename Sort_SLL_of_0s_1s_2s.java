@@ -1,16 +1,30 @@
-package linkedlist;
+package LinkedList;
+
+class ListNode {
+    public int data;
+    public ListNode next;
+
+    public ListNode() {}
+    public ListNode(int data) {
+        this.data = data;
+    }
+    public ListNode(int data, ListNode next) {
+        this.data = data;
+        this.next = next;
+    }
+}
 
 public class Sort_SLL_of_0s_1s_2s {
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) return head;
 
         ListNode zeroDummy = new ListNode(-1);
-        ListNode oneDummy  = new ListNode(-1);
-        ListNode twoDummy  = new ListNode(-1);
+        ListNode oneDummy = new ListNode(-1);
+        ListNode twoDummy = new ListNode(-1);
 
         ListNode zero = zeroDummy;
-        ListNode one  = oneDummy;
-        ListNode two  = twoDummy;
+        ListNode one = oneDummy;
+        ListNode two = twoDummy;
 
         ListNode ptr = head;
         while (ptr != null) {
@@ -26,10 +40,10 @@ public class Sort_SLL_of_0s_1s_2s {
             }
             ptr = ptr.next;
         }
-        
+
         zero.next = (oneDummy.next != null) ? oneDummy.next : twoDummy.next;
         one.next = twoDummy.next;
-        two.next = null; 
+        two.next = null;
 
         return zeroDummy.next;
     }

@@ -1,4 +1,4 @@
-package linkedlist;
+package LinkedList;
 
 public class segragate_odd_even_nodes_SLL {
 

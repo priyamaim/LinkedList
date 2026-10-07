@@ -1,5 +1,19 @@
-package linkedlist;
+package LinkedList;
+class ListNode {
+    public int data;
+    public ListNode prev;
+    public ListNode next;
 
+    public ListNode() {}
+    public ListNode(int data) {
+        this.data = data;
+    }
+    public ListNode(int data, ListNode prev, ListNode next) {
+        this.data = data;
+        this.prev = prev;
+        this.next = next;
+    }
+}
 public class Insert_node_before_kth_node_DLL {
 
     public ListNode insertBeforeKthPosition(ListNode head, int X, int K) {

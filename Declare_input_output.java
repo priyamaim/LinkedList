@@ -1,4 +1,4 @@
-package linkedlist;
+package LinkedList;
 
 import java.util.Scanner;
 

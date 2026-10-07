@@ -1,4 +1,4 @@
-package linkedlist;
+package LinkedList;
 
 // Node class
 class Node {

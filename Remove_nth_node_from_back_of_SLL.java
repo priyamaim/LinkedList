@@ -1,4 +1,4 @@
-package linkedlist;
+package LinkedList;
 
 public class Remove_nth_node_from_back_of_SLL {
 

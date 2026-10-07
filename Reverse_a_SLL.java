@@ -1,4 +1,4 @@
-package linkedlist;
+package LinkedList;
 
 public class Reverse_a_SLL {
     public ListNode reverseList(ListNode head) {
